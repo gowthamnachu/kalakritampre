@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
 import './App.css'
 
 // Only load IntroVideo, Home and ComingSoon components

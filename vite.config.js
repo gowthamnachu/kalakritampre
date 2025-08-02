@@ -14,8 +14,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          helmet: ['react-helmet-async']
+          vendor: ['react', 'react-dom', 'react-router-dom']
         },
         // Optimize chunk file names for caching
         chunkFileNames: 'assets/js/[name]-[hash].js',
@@ -58,6 +57,6 @@ export default defineConfig({
   },
   // Optimize dependencies
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async']
+    include: ['react', 'react-dom', 'react-router-dom']
   }
 })
