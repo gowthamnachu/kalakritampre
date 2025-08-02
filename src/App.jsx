@@ -2,11 +2,27 @@ import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import './App.css'
 
-// Only load IntroVideo, Home and ComingSoon components
-const IntroVideo = React.lazy(() => import('./components/IntroVideo'));
-const Home = React.lazy(() => import('./components/Home'));
-const ComingSoon = React.lazy(() => import('./components/ComingSoon'));
-const NotFound = React.lazy(() => import('./components/NotFound'));
+// Only load IntroVideo, Home and ComingSoon components with error fallback
+const IntroVideo = React.lazy(() => 
+  import('./components/IntroVideo/IntroVideo').catch(() => ({
+    default: () => <div>Error loading IntroVideo. Redirecting to home...</div>
+  }))
+);
+const Home = React.lazy(() => 
+  import('./components/Home/Home').catch(() => ({
+    default: () => <div>Error loading Home page. Please refresh.</div>
+  }))
+);
+const ComingSoon = React.lazy(() => 
+  import('./components/ComingSoon/ComingSoon').catch(() => ({
+    default: () => <div>Error loading page. Redirecting to home...</div>
+  }))
+);
+const NotFound = React.lazy(() => 
+  import('./components/NotFound/NotFound').catch(() => ({
+    default: () => <div>Error loading NotFound page. Redirecting to home...</div>
+  }))
+);
 
 // Lazy loading fallback component
 const LazyLoadingFallback = () => (
@@ -37,6 +53,10 @@ class LazyLoadingErrorBoundary extends React.Component {
 
   componentDidCatch(error, errorInfo) {
     console.error('Lazy loading error:', error, errorInfo);
+    // Redirect to home after error
+    setTimeout(() => {
+      window.location.href = '/home';
+    }, 3000);
   }
 
   render() {
