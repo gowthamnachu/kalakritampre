@@ -1,0 +1,49 @@
+# Kalakritam - Robots.txt
+# Premier Indian Art Gallery
+
+User-agent: *
+Allow: /
+
+# Specific allowances for important crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Disallow admin and development areas (when implemented)
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /*.json$
+Disallow: /dev/
+Disallow: /test/
+
+# Allow important files
+Allow: /sitemap.xml
+Allow: /favicon.ico
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.mp4
+Allow: /*.webm
+
+# Sitemap location
+Sitemap: https://kalakritam.in/sitemap.xml
+
+# Additional sitemaps (for future expansion)
+Sitemap: https://kalakritam.in/gallery-sitemap.xml
+Sitemap: https://kalakritam.in/artists-sitemap.xml
+Sitemap: https://kalakritam.in/blog-sitemap.xml

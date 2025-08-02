@@ -1,0 +1,62 @@
+/* Enhanced Font System for Kalakritam */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=The+Seasons&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Samarkan Font for Kalakritam Brand */
+@font-face {
+  font-family: 'Samarkan';
+  src: url('./samarkan.woff2') format('woff2'),
+       url('./samarkan.woff') format('woff'),
+       url('./samarkan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font utility classes */
+.kalakritam-title {
+  font-family: 'Samarkan', 'Cinzel', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase;
+}
+
+.heading-font {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.body-font {
+  font-family: 'The Seasons', 'Cinzel', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+.elegant-font {
+  font-family: 'Playfair Display', 'Cinzel', serif;
+  font-style: italic;
+}
+
+/* Typography scale */
+.text-xs { font-size: clamp(0.7rem, 2vw, 0.8rem); }
+.text-sm { font-size: clamp(0.8rem, 2.5vw, 0.9rem); }
+.text-base { font-size: clamp(0.9rem, 3vw, 1rem); }
+.text-lg { font-size: clamp(1rem, 3.5vw, 1.2rem); }
+.text-xl { font-size: clamp(1.2rem, 4vw, 1.5rem); }
+.text-2xl { font-size: clamp(1.5rem, 5vw, 2rem); }
+.text-3xl { font-size: clamp(2rem, 6vw, 3rem); }
+.text-4xl { font-size: clamp(2.5rem, 7vw, 4rem); }
+
+/* Font weight utilities */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* Letter spacing utilities */
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-normal { letter-spacing: 0; }
+.tracking-wide { letter-spacing: 0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.tracking-widest { letter-spacing: 0.1em; }

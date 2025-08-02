@@ -1,0 +1,127 @@
+/* App.css - Kalakritam Application Styles */
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--dark-teal);
+  color: var(--text-light);
+  font-family: 'The Seasons', 'Cinzel', system-ui, sans-serif;
+}
+
+/* Remove default Vite styles that are not needed for Kalakritam */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+/* Ensure proper layout for full-screen components */
+.intro-video-container,
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Focus management for accessibility */
+.app *:focus {
+  outline: 2px solid var(--primary-gold);
+  outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-gold);
+  color: var(--dark-teal);
+  padding: 8px;
+  z-index: 10000;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Error states */
+.error-boundary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--dark-teal);
+  color: var(--primary-gold);
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.error-boundary h2 {
+  margin-bottom: var(--space-md);
+  font-family: 'Samarkan', 'Cinzel', serif;
+}
+
+.error-boundary button {
+  margin-top: var(--space-md);
+  background: var(--primary-gold);
+  color: var(--dark-teal);
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.error-boundary button:hover {
+  background: var(--secondary-gold);
+  transform: translateY(-2px);
+}
+
+/* Loading states */
+.loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--dark-teal);
+  color: var(--primary-gold);
+  font-size: 1.2rem;
+  font-family: 'Samarkan', 'Cinzel', serif;
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  .app {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    font-size: 13px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .app {
+    --primary-gold: #ffcc00;
+    --secondary-gold: #ffe066;
+    --text-light: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

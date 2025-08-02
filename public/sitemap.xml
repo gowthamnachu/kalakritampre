@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://kalakritam.in/</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://kalakritam.in/og-image.jpg</image:loc>
+      <image:title>Kalakritam - Premier Indian Art Gallery</image:title>
+      <image:caption>Traditional Kala and Contemporary Kritam showcase</image:caption>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://kalakritam.in/intro-video-thumbnail.jpg</video:thumbnail_loc>
+      <video:title>Kalakritam Introduction Video</video:title>
+      <video:description>Welcome to Kalakritam - Experience the art of creation</video:description>
+      <video:content_loc>https://kalakritam.in/intro-video.mp4</video:content_loc>
+      <video:duration>5</video:duration>
+    </video:video>
+  </url>
+
+  <!-- Gallery Section -->
+  <url>
+    <loc>https://kalakritam.in/gallery</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://kalakritam.in/gallery-preview.jpg</image:loc>
+      <image:title>Kalakritam Art Gallery</image:title>
+      <image:caption>Traditional and Contemporary Indian Art Collection</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Traditional Kala Collection -->
+  <url>
+    <loc>https://kalakritam.in/gallery/traditional-kala</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contemporary Kritam Collection -->
+  <url>
+    <loc>https://kalakritam.in/gallery/contemporary-kritam</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Workshops -->
+  <url>
+    <loc>https://kalakritam.in/workshops</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Art Forms Pages -->
+  <url>
+    <loc>https://kalakritam.in/art-forms/madhubani</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://kalakritam.in/art-forms/warli</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://kalakritam.in/art-forms/tanjore</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Events -->
+  <url>
+    <loc>https://kalakritam.in/events</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artists -->
+  <url>
+    <loc>https://kalakritam.in/artists</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Art Blogs -->
+  <url>
+    <loc>https://kalakritam.in/artblogs</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://kalakritam.in/about</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://kalakritam.in/contact</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://kalakritam.in/privacy-policy</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://kalakritam.in/terms-of-service</loc>
+    <lastmod>2025-08-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
