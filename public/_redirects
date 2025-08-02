@@ -1,11 +1,5 @@
 # Cloudflare Pages Redirects for Kalakritam
 
-# SPA redirect - handle client-side routing
-/*    /index.html   200
-
-# Root redirect to home
-/     /home         301
-
 # SEO redirects for better indexing
 /gallery/   /gallery   301
 /workshops/ /workshops 301
@@ -18,6 +12,9 @@
 # Legacy URL redirects (if any)
 /art-gallery    /gallery    301
 /art-workshops  /workshops  301
+
+# SPA redirect - handle client-side routing (must be last)
+/*    /index.html   200
 /kalakritam     /home       301
 
 # Error handling
