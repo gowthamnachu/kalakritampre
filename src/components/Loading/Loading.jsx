@@ -38,7 +38,7 @@ const Loading = () => {
       <div className="loading-container">
         <div className="loading-logo">
           <h1 className="loading-title">Kalakritam</h1>
-          <p className="loading-subtitle">Manifesting Through Arts</p>
+          <p className="loading-subtitle">Manifesting Through Art</p>
           
           <div className="loading-progress">
             <div className="progress-container">

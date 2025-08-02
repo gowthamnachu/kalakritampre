@@ -2,8 +2,8 @@ import React from 'react';
 import { useSEO } from '../../hooks/useSEO';
 
 const SEO = ({
-  title = "Kalakritam - Premier Indian Art Gallery | Traditional Kala & Contemporary Kritam",
-  description = "Discover Kalakritam, India's premier art gallery showcasing traditional kala, contemporary kritam, and cultural heritage. Explore 500+ masterpieces, join workshops, and connect with India's vibrant art community.",
+  title = "Kalakritam - Manifesting Through Art",
+  description = "Discover Kalakritam - Manifesting Through Art. Experience our curated collection of traditional and contemporary Indian artworks, join immersive workshops, and connect with India's vibrant artistic community.",
   keywords = "Kalakritam, Indian art gallery, traditional kala art, contemporary kritam, Madhubani paintings, Warli art, Tanjore paintings, Indian cultural heritage, art workshops, art exhibitions, Indian artists, art community, art education, cultural tours, artist residency",
   image = "/og-image.jpg",
   url = "https://kalakritam.in",

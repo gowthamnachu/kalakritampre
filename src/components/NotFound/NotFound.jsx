@@ -33,7 +33,7 @@ const NotFound = () => {
           <div className="not-found-hero">
             <div className="kalakritam-logo">
               <h1 className="kalakritam-title">Kalakritam</h1>
-              <p className="kalakritam-subtitle">Manifesting Through Arts</p>
+              <p className="kalakritam-subtitle">Manifesting Through Art</p>
             </div>
             
             <div className="error-message">

@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3 className="footer-title">Kalakritam</h3>
-          <p className="footer-description">Manifesting Through Arts</p>
+          <p className="footer-description">Manifesting Through Art</p>
           <div className="social-links">
             <a href="https://instagram.com/kalakritam.in" target="_blank" rel="noopener noreferrer" className="social-link">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">

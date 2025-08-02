@@ -25,7 +25,7 @@ const Header = ({ currentPage = 'home' }) => {
       <div className="header-content">
         <div className="header-brand" onClick={() => navigate('/home')}>
           <h1 className="kalakritam-title">Kalakritam</h1>
-          <div className="header-subtitle">Manifesting Through Arts</div>
+          <div className="header-subtitle">Manifesting Through Art</div>
         </div>
         
         <nav className="header-navigation">

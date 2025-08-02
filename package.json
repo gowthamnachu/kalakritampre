@@ -9,7 +9,10 @@
     "build:cf": "vite build && copy public\\_redirects dist\\ && copy public\\robots.txt dist\\ && copy public\\sitemap.xml dist\\",
     "lint": "eslint .",
     "preview": "vite preview",
-    "preview:cf": "npm run build:cf && vite preview --port 4173 --host"
+    "preview:cf": "npm run build:cf && vite preview --port 4173 --host",
+    "test:seo": "node scripts/test-seo.js",
+    "check:seo": "node scripts/seo-checker.js",
+    "test:robots": "node scripts/test-robots.js"
   },
   "dependencies": {
     "react": "^19.1.0",

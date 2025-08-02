@@ -44,7 +44,7 @@ const Home = () => {
           "@id": "https://kalakritam.com/#organization",
           "name": "Kalakritam",
           "alternateName": "Kalakritam Art Gallery",
-          "description": "India's premier art gallery showcasing traditional kala and contemporary kritam, featuring over 500 masterpieces and cultural heritage experiences.",
+          "description": "Kalakritam - Manifesting Through Art. Experience our curated collection of traditional and contemporary Indian artworks, featuring cultural heritage and artistic experiences.",
           "url": "https://kalakritam.com",
           "logo": {
             "@type": "ImageObject",
@@ -116,7 +116,7 @@ const Home = () => {
           "@id": "https://kalakritam.com/#website",
           "url": "https://kalakritam.com",
           "name": "Kalakritam",
-          "description": "Premier Indian Art Gallery showcasing traditional kala and contemporary kritam",
+          "description": "Premier Indian Art Gallery showcasing traditional and contemporary artworks",
           "publisher": {
             "@id": "https://kalakritam.com/#organization"
           },
@@ -142,7 +142,7 @@ const Home = () => {
           "about": {
             "@id": "https://kalakritam.com/#organization"
           },
-          "description": "Experience Kalakritam - India's premier art gallery featuring traditional kala and contemporary kritam with 500+ masterpieces, workshops, and cultural heritage tours.",
+          "description": "Experience Kalakritam - Manifesting Through Art. Featuring traditional and contemporary artworks with immersive workshops and cultural heritage tours.",
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -179,15 +179,15 @@ const Home = () => {
   return (
     <>
       <SEO 
-        title="Kalakritam - Premier Indian Art Gallery | Traditional Kala & Contemporary Kritam"
-        description="Discover Kalakritam, India's premier art gallery showcasing traditional kala, contemporary kritam, and cultural heritage. Explore 500+ masterpieces, join workshops, and connect with India's vibrant art community."
+        title="Kalakritam - Manifesting Through Art"
+        description="Discover Kalakritam - Manifesting Through Art. Experience our curated collection of traditional and contemporary Indian artworks, join immersive workshops, and connect with India's vibrant artistic community."
         keywords="Kalakritam, Indian art gallery, traditional kala art, contemporary kritam, Madhubani paintings, Warli art, Tanjore paintings, Indian cultural heritage, art workshops, art exhibitions, Indian artists, art community, art education, cultural tours, artist residency"
         url="/"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "ArtGallery",
           "name": "Kalakritam",
-          "description": "India's premier art gallery showcasing traditional kala and contemporary kritam",
+          "description": "Kalakritam - Manifesting Through Art. Experience traditional and contemporary artworks",
           "url": "https://kalakritam.com",
           "image": "https://kalakritam.com/og-image.jpg",
           "address": {

@@ -1,34 +1,246 @@
 # Kalakritam - Robots.txt
-# Premier Indian Art Gallery
+# Manifesting Through Art
+# https://kalakritam.in
 
-User-agent: *
-Allow: /
+# ==========================================
+# AI SCRAPERS & CRAWLERS - BLOCKED FIRST
+# ==========================================
 
-# Specific allowances for important crawlers
+# OpenAI GPT Bot
+User-agent: GPTBot
+Disallow: /
+
+# Anthropic Claude Bot
+User-agent: ClaudeBot
+Disallow: /
+
+# Google Bard/Gemini AI
+User-agent: Google-Extended
+Disallow: /
+
+# ChatGPT User Agent
+User-agent: ChatGPT-User
+Disallow: /
+
+# Common Crawl (used by AI training)
+User-agent: CCBot
+Disallow: /
+
+# ByteDance/TikTok AI
+User-agent: ByteSpider
+Disallow: /
+
+# Meta AI Bot
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# Amazon Alexa Bot
+User-agent: ia_archiver
+Disallow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Disallow: /
+
+# Cohere AI
+User-agent: CohereBot
+Disallow: /
+
+# You.com AI
+User-agent: YouBot
+Disallow: /
+
+# Claude AI variants
+User-agent: Claude-Web
+Disallow: /
+
+# Generic AI scrapers
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude*
+Disallow: /
+
+# ==========================================
+# OTHER UNWANTED BOTS - BLOCKED
+# ==========================================
+
+# Aggressive scrapers
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: AhrefsBot-News
+Disallow: /
+
+# ==========================================
+# SEARCH ENGINE BOTS - ALLOWED
+# ==========================================
+
+# Google Search Bot
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
+# Disallow sensitive areas
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /.env
 
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 1
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /src/
+
+# Google Mobile Bot
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 1
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /src/
+
+# Bing Search Bot
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /.env
 
+# Bing Preview Bot
+User-agent: BingPreview
+Allow: /
+Crawl-delay: 2
+Disallow: /admin/
+Disallow: /src/
+
+# Yahoo Slurp Bot
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+Disallow: /admin/
+Disallow: /src/
+
+# DuckDuckGo Bot
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+Disallow: /admin/
+Disallow: /src/
+
+# Yandex Bot (Russian search engine)
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+Disallow: /admin/
+Disallow: /src/
+
+# Baidu Bot (Chinese search engine)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 3
+Disallow: /admin/
+Disallow: /src/
+
+# ==========================================
+# SOCIAL MEDIA BOTS - ALLOWED
+# ==========================================
+
+# Facebook External Hit (for link previews)
 User-agent: facebookexternalhit
 Allow: /
 
+# Facebook Crawler
+User-agent: FacebookBot
+Allow: /
+
+# Twitter Bot (for card previews)
 User-agent: Twitterbot
 Allow: /
 
-# Disallow admin and development areas (when implemented)
+# LinkedIn Bot
+User-agent: LinkedInBot
+Allow: /
+
+# Pinterest Bot
+User-agent: Pinterestbot
+Allow: /
+
+# WhatsApp Bot
+User-agent: WhatsApp
+Allow: /
+
+# ==========================================
+# SEO & ANALYTICS BOTS - ALLOWED
+# ==========================================
+
+# Ahrefs Bot (SEO analysis)
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
 Disallow: /admin/
+Disallow: /src/
+
+# SEMrush Bot
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+Disallow: /admin/
+Disallow: /src/
+
+# Moz Bot
+User-agent: MozBot
+Allow: /
+Crawl-delay: 5
+Disallow: /admin/
+Disallow: /src/
+
+# ==========================================
+# DEFAULT RULES FOR OTHER BOTS
+# ==========================================
+
+# Allow all other legitimate bots with restrictions
+User-agent: *
+Crawl-delay: 2
+
+# Disallow sensitive directories FIRST - these take precedence
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
 Disallow: /api/private/
-Disallow: /*.json$
+Disallow: /api/admin/
 Disallow: /dev/
 Disallow: /test/
+Disallow: /staging/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*.config$
+Disallow: /.env
+Disallow: /package.json
+Disallow: /vite.config.js
+Disallow: /src/
+Disallow: /node_modules/
 
-# Allow important files
+# Allow important files and general access (but disallowed paths above remain blocked)
 Allow: /sitemap.xml
+Allow: /robots.txt
 Allow: /favicon.ico
+Allow: /.well-known/
 Allow: /*.css
 Allow: /*.js
 Allow: /*.png
@@ -39,11 +251,40 @@ Allow: /*.svg
 Allow: /*.webp
 Allow: /*.mp4
 Allow: /*.webm
+Allow: /*.pdf
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.eot
+Allow: /assets/
+Allow: /images/
+Allow: /videos/
+Allow: /fonts/
+Allow: /404
+Allow: /error
 
-# Sitemap location
+# Note: No blanket Allow: / here - specific Disallow rules above take precedence
+
+# ==========================================
+# SITEMAP LOCATIONS
+# ==========================================
+
+# Main sitemap
 Sitemap: https://kalakritam.in/sitemap.xml
 
-# Additional sitemaps (for future expansion)
-Sitemap: https://kalakritam.in/gallery-sitemap.xml
-Sitemap: https://kalakritam.in/artists-sitemap.xml
-Sitemap: https://kalakritam.in/blog-sitemap.xml
+# ==========================================
+# NOTES FOR DEVELOPERS
+# ==========================================
+# 
+# This robots.txt file is designed to:
+# 1. Block AI training scrapers FIRST (specific rules)
+# 2. Allow legitimate search engines with appropriate delays
+# 3. Allow social media bots for link previews
+# 4. Block aggressive SEO scrapers
+# 5. Protect sensitive directories and files
+# 6. Optimize crawl budget with appropriate delays
+#
+# Rule Priority: Specific User-agent rules override wildcard (*)
+# Last updated: August 2, 2025
+#
+# ==========================================

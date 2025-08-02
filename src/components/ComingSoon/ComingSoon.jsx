@@ -107,7 +107,7 @@ const ComingSoon = () => {
           <div className="coming-soon-animation">
             <div className="kalakritam-logo">
               <h1 className="kalakritam-title">Kalakritam</h1>
-              <p className="kalakritam-subtitle">Manifesting Through Arts</p>
+              <p className="kalakritam-subtitle">Manifesting Through Art</p>
             </div>
             
             <div className="development-status">

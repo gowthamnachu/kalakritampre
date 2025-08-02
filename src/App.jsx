@@ -7,6 +7,7 @@ import IntroVideo from './components/IntroVideo'
 import Home from './components/Home'
 import ComingSoon from './components/ComingSoon'
 import NotFound from './components/NotFound'
+import SEODebug from './components/SEODebug'
 
 // Simple, reliable error boundary
 class ErrorBoundary extends React.Component {
@@ -95,6 +96,7 @@ function App() {
             <Route path="/about" element={<ComingSoon />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <SEODebug />
         </div>
       </Router>
     </ErrorBoundary>
