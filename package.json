@@ -13,6 +13,7 @@
     "test:seo": "node scripts/test-seo.js",
     "check:seo": "node scripts/seo-checker.js",
     "check:logo": "node scripts/check-seo-logo.js",
+    "verify:seo": "node scripts/verify-seo-org.js",
     "logo:setup": "node scripts/logo-setup.js",
     "test:robots": "node scripts/test-robots.js"
   },

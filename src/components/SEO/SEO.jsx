@@ -25,40 +25,30 @@ const SEO = ({
   const fullUrl = url.startsWith('http') ? url : `${siteUrl}${url}`;
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
-  const defaultStructuredData = {
+  // Clean Organization schema for SEO (no LocalBusiness, just Organization)
+  const seoOrganizationData = {
     "@context": "https://schema.org",
-    "@type": type === "article" ? "Article" : "WebPage",
-    "name": title,
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    "name": "Kalakritam",
+    "alternateName": "Kalakritam Art Gallery",
     "description": description,
     "url": fullUrl,
-    "image": fullImageUrl,
-    "publisher": {
-      "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      "name": "Kalakritam",
-      "logo": {
-        "@type": "ImageObject",
-        "url": `${siteUrl}/logo.png`,
-        "width": 512,
-        "height": 512,
-        "caption": "Kalakritam Logo"
-      }
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/logo.png`,
+      "width": 512,
+      "height": 512,
+      "caption": "Kalakritam - Manifesting Through Art"
     },
-    ...(type === "article" && {
-      "author": {
-        "@type": "Person",
-        "name": author
-      },
-      "datePublished": publishedTime,
-      "dateModified": modifiedTime || publishedTime,
-      "articleSection": articleSection,
-      "keywords": articleTags || keywords
-    })
+    "image": fullImageUrl,
+    "sameAs": [
+      "https://www.instagram.com/kalakritam.in"
+    ]
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  // Use the custom SEO hook
+  // Use the custom SEO hook WITH clean Organization structured data
+  // Use the custom SEO hook WITH clean Organization structured data
   useSEO({
     title,
     description,
@@ -72,7 +62,7 @@ const SEO = ({
     canonical,
     noindex,
     nofollow,
-    structuredData: finalStructuredData
+    structuredData: structuredData || seoOrganizationData // Use provided data or default to clean Organization
   });
 
   return null; // This component doesn't render anything visible

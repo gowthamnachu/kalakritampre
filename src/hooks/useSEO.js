@@ -83,7 +83,7 @@ export const useSEO = ({
     // Canonical URL
     updateLinkTag('canonical', canonicalUrl);
 
-    // Structured Data (JSON-LD)
+    // Structured Data (JSON-LD) - only inject if structuredData is provided and not null
     if (structuredData) {
       let scriptElement = document.head.querySelector('script[type="application/ld+json"][data-seo]');
       if (!scriptElement) {
@@ -93,6 +93,12 @@ export const useSEO = ({
         document.head.appendChild(scriptElement);
       }
       scriptElement.textContent = JSON.stringify(structuredData);
+    } else {
+      // Remove any existing SEO-injected structured data
+      const existingScript = document.head.querySelector('script[type="application/ld+json"][data-seo]');
+      if (existingScript) {
+        existingScript.remove();
+      }
     }
 
     // Cleanup function
