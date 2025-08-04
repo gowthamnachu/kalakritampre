@@ -25,30 +25,8 @@ const SEO = ({
   const fullUrl = url.startsWith('http') ? url : `${siteUrl}${url}`;
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 
-  // Clean Organization schema for SEO (no LocalBusiness, just Organization)
-  const seoOrganizationData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${siteUrl}/#organization`,
-    "name": "Kalakritam",
-    "alternateName": "Kalakritam Art Gallery",
-    "description": description,
-    "url": fullUrl,
-    "logo": {
-      "@type": "ImageObject",
-      "url": `${siteUrl}/logo.png`,
-      "width": 512,
-      "height": 512,
-      "caption": "Kalakritam - Manifesting Through Art"
-    },
-    "image": fullImageUrl,
-    "sameAs": [
-      "https://www.instagram.com/kalakritam.in"
-    ]
-  };
-
-  // Use the custom SEO hook WITH clean Organization structured data
-  // Use the custom SEO hook WITH clean Organization structured data
+  // Use the custom SEO hook WITHOUT any structured data to avoid validation conflicts
+  // Use the custom SEO hook WITHOUT any structured data to avoid validation conflicts
   useSEO({
     title,
     description,
@@ -62,7 +40,7 @@ const SEO = ({
     canonical,
     noindex,
     nofollow,
-    structuredData: structuredData || seoOrganizationData // Use provided data or default to clean Organization
+    structuredData: null // Completely disable structured data injection
   });
 
   return null; // This component doesn't render anything visible

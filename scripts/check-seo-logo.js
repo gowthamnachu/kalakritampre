@@ -35,11 +35,9 @@ if (fs.existsSync(indexPath)) {
   
   const checks = [
     { name: 'Organization schema', pattern: /"@type":\s*"Organization"/ },
-    { name: 'Logo ImageObject', pattern: /"@type":\s*"ImageObject"/ },
-    { name: 'Logo URL', pattern: /"url":\s*"https:\/\/kalakritam\.in\/logo\.png"/ },
-    { name: 'Logo dimensions', pattern: /"width":\s*512/ },
-    { name: 'Logo caption', pattern: /"caption":\s*".*"/ },
-    { name: 'WebSite schema', pattern: /"@type":\s*"WebSite"/ }
+    { name: 'Organization name', pattern: /"name":\s*"Kalakritam"/ },
+    { name: 'Organization URL', pattern: /"url":\s*"https:\/\/kalakritam\.in"/ },
+    { name: 'Logo URL (simple)', pattern: /"logo":\s*"https:\/\/kalakritam\.in\/logo\.png"/ }
   ];
   
   checks.forEach(check => {
