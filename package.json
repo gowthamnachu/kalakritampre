@@ -12,6 +12,8 @@
     "preview:cf": "npm run build:cf && vite preview --port 4173 --host",
     "test:seo": "node scripts/test-seo.js",
     "check:seo": "node scripts/seo-checker.js",
+    "check:logo": "node scripts/check-seo-logo.js",
+    "logo:setup": "node scripts/logo-setup.js",
     "test:robots": "node scripts/test-robots.js"
   },
   "dependencies": {

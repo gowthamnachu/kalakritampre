@@ -35,141 +35,15 @@ const Home = () => {
       window.performance.mark('kalakritam-home-loaded');
     }
 
-    // Add comprehensive JSON-LD structured data
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "ArtGallery",
-          "@id": "https://kalakritam.com/#organization",
-          "name": "Kalakritam",
-          "alternateName": "Kalakritam Art Gallery",
-          "description": "Kalakritam - Manifesting Through Art. Experience our curated collection of traditional and contemporary Indian artworks, featuring cultural heritage and artistic experiences.",
-          "url": "https://kalakritam.com",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://kalakritam.com/logo.png",
-            "width": 512,
-            "height": 512
-          },
-          "image": "https://kalakritam.com/og-image.jpg",
-          "telephone": "+91-XXXXXXXXXX",
-          "email": "info@kalakritam.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Art District",
-            "addressLocality": "New Delhi", 
-            "addressRegion": "Delhi",
-            "postalCode": "110001",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "28.6139",
-            "longitude": "77.2090"
-          },
-          "openingHours": "Mo-Su 10:00-18:00",
-          "priceRange": "₹₹",
-          "currenciesAccepted": "INR",
-          "paymentAccepted": "Cash, Credit Card, Digital Payment",
-          "foundingDate": "2015",
-          "artform": [
-            "Traditional Indian Art",
-            "Contemporary Art", 
-            "Madhubani Paintings",
-            "Warli Art",
-            "Tanjore Paintings",
-            "Pichwai Paintings",
-            "Sculptures",
-            "Mixed Media"
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Art Collections and Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Art Gallery Tours",
-                  "description": "Guided tours through traditional and contemporary Indian art collections"
-                }
-              },
-              {
-                "@type": "Offer", 
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Art Workshops",
-                  "description": "Interactive workshops on traditional Indian art techniques"
-                }
-              }
-            ]
-          },
-          "sameAs": [
-            "https://www.instagram.com/kalakritam.in",
-            "https://www.facebook.com/kalakritam",
-            "https://www.twitter.com/kalakritam"
-          ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://kalakritam.com/#website",
-          "url": "https://kalakritam.com",
-          "name": "Kalakritam",
-          "description": "Premier Indian Art Gallery showcasing traditional and contemporary artworks",
-          "publisher": {
-            "@id": "https://kalakritam.com/#organization"
-          },
-          "potentialAction": [
-            {
-              "@type": "SearchAction",
-              "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": "https://kalakritam.com/search?q={search_term_string}"
-              },
-              "query-input": "required name=search_term_string"
-            }
-          ]
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://kalakritam.com/#webpage",
-          "url": "https://kalakritam.com",
-          "name": "Home - Kalakritam Art Gallery",
-          "isPartOf": {
-            "@id": "https://kalakritam.com/#website"
-          },
-          "about": {
-            "@id": "https://kalakritam.com/#organization"
-          },
-          "description": "Experience Kalakritam - Manifesting Through Art. Featuring traditional and contemporary artworks with immersive workshops and cultural heritage tours.",
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://kalakritam.com"
-              }
-            ]
-          }
-        }
-      ]
-    };
-
-    // Add structured data to document head
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-
-    // Cleanup function
+    // Simplified structured data - removed complex schemas that cause validation errors
+    // Logo is already handled in index.html Organization schema
+    
+    // Cleanup function for any existing structured data scripts
     return () => {
-      // Remove the script when component unmounts
+      // Remove any injected scripts when component unmounts
       const scripts = document.querySelectorAll('script[type="application/ld+json"]');
       scripts.forEach(script => {
-        if (script.text.includes('kalakritam.com/#organization')) {
+        if (script.text && (script.text.includes('kalakritam.com/#organization') || script.text.includes('ArtGallery'))) {
           script.remove();
         }
       });
@@ -183,39 +57,6 @@ const Home = () => {
         description="Discover Kalakritam - Manifesting Through Art. Experience our curated collection of traditional and contemporary Indian artworks, join immersive workshops, and connect with India's vibrant artistic community."
         keywords="Kalakritam, Indian art gallery, traditional kala art, contemporary kritam, Madhubani paintings, Warli art, Tanjore paintings, Indian cultural heritage, art workshops, art exhibitions, Indian artists, art community, art education, cultural tours, artist residency"
         url="/"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "ArtGallery",
-          "name": "Kalakritam",
-          "description": "Kalakritam - Manifesting Through Art. Experience traditional and contemporary artworks",
-          "url": "https://kalakritam.com",
-          "image": "https://kalakritam.com/og-image.jpg",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "IN"
-          },
-          "artform": ["Traditional Indian Art", "Contemporary Art", "Madhubani", "Warli", "Tanjore"],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Art Collections and Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service", 
-                  "name": "Art Gallery Tours"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Art Workshops"
-                }
-              }
-            ]
-          }
-        }}
       />
       
       <div className="home-container">

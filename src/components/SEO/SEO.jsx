@@ -38,7 +38,10 @@ const SEO = ({
       "name": "Kalakritam",
       "logo": {
         "@type": "ImageObject",
-        "url": `${siteUrl}/logo.png`
+        "url": `${siteUrl}/logo.png`,
+        "width": 512,
+        "height": 512,
+        "caption": "Kalakritam Logo"
       }
     },
     ...(type === "article" && {
